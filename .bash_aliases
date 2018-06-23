@@ -1,0 +1,6 @@
+alias s-i='systemctl status'
+alias s-u='systemctl start'
+alias s-r='systemctl restart'
+alias s-s='systemctl stop'
+alias s-l='systemctl reload'
+alias ll='ls -la'
