@@ -11,3 +11,5 @@ done
 
 mkdir -p ~/.ssh
 cp -a -f ~/.dotfiles/ssh-config ~/.ssh/config
+
+~/.powerline-fonts/install.sh
