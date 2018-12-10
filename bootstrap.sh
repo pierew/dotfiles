@@ -9,6 +9,11 @@ do
     ln -v -s ~/.dotfiles/${item} ~
 done
 
+#tmux
+ln -v -s ~/.dotfiles/.tmux/.tmux.conf ~
+
+#ssh
+
 mkdir -p ~/.ssh
 cp -a -f ~/.dotfiles/ssh-config ~/.ssh/config
 chmod 0600 ~/.ssh/config
