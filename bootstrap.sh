@@ -1,5 +1,5 @@
 #!/bin/bash
-for item in $(ls -F -A -1 ~/.dotfiles/ | grep -e "^\." | grep '/' | grep -v 'git' | grep -v 'ssh')
+for item in $(ls -F -A -1 ~/.dotfiles/ | grep -e "^\." | grep '/' | grep -v 'git')
 do
     ln -s ~/.dotfiles/${item} ~
 done
@@ -10,4 +10,4 @@ do
 done
 
 mkdir -p ~/.ssh
-ln -s ~/.dotfiles/.ssh/config ~/.ssh/config
+cp -a -f ~/.dotfiles/ssh-config ~/.ssh/config
