@@ -7,3 +7,6 @@
 [submodule ".oh-my-vim"]
 	path = .oh-my-vim
 	url = git@github.com:liangxianzhe/oh-my-vim.git
+[submodule ".powerline-fonts"]
+	path = .powerline-fonts
+	url = git@github.com:powerline/fonts.git
