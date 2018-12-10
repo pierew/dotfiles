@@ -1,10 +1,13 @@
 #!/bin/bash
-for item in $(ls -d -A -1 ~/.dotfiles/ | grep -e "^\.")
+for item in $(ls -F -A -1 ~/.dotfiles/ | grep -e "^\." | grep '/' | grep -v 'git' | grep -v 'ssh')
 do
-    ln -s ~/.dotfiles/${item}
+    ln -s ~/.dotfiles/${item} ~
 done
 
-for item in $(ls -f -A -1 ~/.dotfiles/ | grep -e "^\.")
+for item in $(ls -F -A -1 ~/.dotfiles/ | grep -e "^\." | grep -v '/' | grep -v 'gitmodules' | grep -v 'gitignore')
 do
-    ln -s ~/.dotfiles/${item}
+    ln -s ~/.dotfiles/${item} ~
 done
+
+mkdir -p ~/.ssh
+ln -s ~/.dotfiles/.ssh/config ~/.ssh/config
